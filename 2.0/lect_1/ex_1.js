@@ -13,11 +13,15 @@ let answer = 0
 for (let i = 0; i <= STR.length - 1; i++) {
 	const current = STR[i]
 	
-	if (!set[current]) set[current] = 0
+	if (!set[current]) {
+		set[current] = 0
+	}
 
 	set[current]++
 	
-	if (answer < set[current]) answer = set[current]
+	if (answer < set[current]) {
+		answer = set[current]
+	}
 }
 
 console.log(set)
