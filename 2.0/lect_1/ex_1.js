@@ -8,7 +8,8 @@ const STR = 'ababaloremtextinputercomputed     j'
 // const STR = 'd'
 
 let set = {}
-let answer = 0
+let answer = ''
+let answerCount = 0
 
 for (let i = 0; i <= STR.length - 1; i++) {
 	const current = STR[i]
@@ -19,8 +20,9 @@ for (let i = 0; i <= STR.length - 1; i++) {
 
 	set[current]++
 	
-	if (answer < set[current]) {
-		answer = set[current]
+	if (answerCount < set[current]) {
+		answerCount = set[current]
+		answer = current === ' ' ? '%20' : current
 	}
 }
 
